@@ -7,9 +7,9 @@ spring:
   application:
     name: sru_lib_management
   datasource:
-    url: mysql://root:gwboNVIaWJDsleYaIUnuPRmBgYyxCCqC@autorack.proxy.rlwy.net:12163/railway
-    username: root
-    password: gwboNVIaWJDsleYaIUnuPRmBgYyxCCqC
+    url: ${db_url}
+    username: ${db_username}
+    password: ${db_password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   sql:
     init:
@@ -21,8 +21,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: phelviwath@gmail.com
-    password: znmj xktk igop quve
+    username: ${email}
+    password: ${email_password}
     properties:
       mail:
         smtp:
@@ -31,10 +31,10 @@ spring:
             enable: true
 hunter:
   api:
-    key: d748d5a51306e066ecf93d2674d82a5be12c58c0
+    key: ${hunter_key}
 jwt:
-  token: 0L3sLtlyKYBAI4e7P1qGWiPbXbAxmgHCpjmdg9AvweWXYZc/WPRhAe4ztjQ75f3FDg/91hKOxcXN7xOuOXYTrczlwf5HgSesjEf05KTGaoV7YRT9WWytTFaMn9gk/cCZAKMtrPv+AzKb2LTqTJEDJJRI7khHHCZ50D0LOTUaKhRp9Z9/WMaQccydK1LNfsodi7svQyi5E2apgZz9w2iEqAStcTnipA7PKGMFw72GTtDqVUhwvUP1f+6TSsBOI+vuFw1zByI731Pix4XScl+U3jcGpy+ZYoVyPgouz+KZjh7qEyo2FtGPoFD8UNaL07GK48GzjmLtFmsuute7S5Jm1u703PF26YrOO3cR4QeP0jw=
-
+  token: ${jwt_token}
+  
 logging:
   level:
     root: INFO
