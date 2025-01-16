@@ -8,7 +8,7 @@ services:
     ports:
       - "8090:8090"
     environment:
-      SPRING_DATASOURCE_URL: mysql://root:gwboNVIaWJDsleYaIUnuPRmBgYyxCCqC@autorack.proxy.rlwy.net:12163/railway
+      SPRING_DATASOURCE_URL: ${DB_URL}
       SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
     depends_on:
